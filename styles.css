@@ -63,7 +63,6 @@ header{
         }
         .logo-text {
             flex: 1;
-
         }
     }
 
@@ -89,8 +88,8 @@ header{
             }
         }
         .mobile-toggle{
-            display: none;
-            color: var(--yellow);
+            display: none; 
+            color: var(--base-800);
             padding: 10px;
             @media (max-width: 768px){
                 display: inline-block;
@@ -101,10 +100,28 @@ header{
         }
     }
 
+    @media (max-width: 1024px){
+        flex-direction:column;
+        align-items: center;
+    }
+
     @media (max-width: 768px){
+        flex-direction:column;
+        align-items: center;
         nav{
+            margin-top: 10px;
+            width:100%;
             ul{
                 display: none;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                a {
+                    width: 100%;
+                }
+                &.active {
+                    display: flex;
+                }
             }
         }
     }
